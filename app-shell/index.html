@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ----------------------------------------------------------------------
+  WARNING:
+  ----------------------------------------------------------------------
+
+  THIS FILE IS USED ONLY FOR DEVELOPMENT, TESTING AND DEBUGGING PURPOSES.
+  CHANGES IN THIS FILE WON'T BE REFLECTED INTO THE PRODUCTION BUILD.
+
+  ----------------------------------------------------------------------
+-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="React webcomponent microfrontends" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8/normalize.css" crossorigin />
+  <title>React Shell App</title>
+  <style>
+    html,
+    body {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script type="module" src="/app-mfe1/app-mfe1.js"></script>
+  <script type="module" src="/app-mfe2/app-mfe2.js"></script>
+  <script type="module" src="/src/index.ts"></script>
+
+  <!-- Alternative way to load custom elements in HTML -->
+
+  <!-- <app-mfe1 text="hello world"></app-mfe1> -->
+  <!-- <app-mfe2></app-mfe2> -->
+</body>
+
+</html>

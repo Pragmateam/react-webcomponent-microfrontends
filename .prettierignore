@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.prettierignore
+.eslintignore
+.lintstagedrc.js
+.prettierrc.js
+.eslintrc.js
+.eslintrc.cjs
+*.config.ts
+*.config.js
+*.config.cjs
+*.d.ts
