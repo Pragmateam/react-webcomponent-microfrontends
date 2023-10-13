@@ -20,7 +20,7 @@ export default function App() {
     window.dispatchEvent(
       new CustomEvent("UpdateText", {
         bubbles: true,
-        composed: true,
+        composed: false, // it must be true in the micro apps so the parent can listen
         cancelable: false,
         detail: text,
       }),

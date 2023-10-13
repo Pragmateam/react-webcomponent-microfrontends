@@ -13,10 +13,22 @@ declare global {
 export default function App() {
   const [text, setText] = useState<string>("");
 
+  const triggerUpdateFromApp2 = useCallback((value: string) => {
+    window.dispatchEvent(
+      new CustomEvent("UpdateFromApp2", {
+        bubbles: true,
+        composed: true, // it must be true in the micro apps so the parent can listen
+        cancelable: false,
+        detail: value,
+      }),
+    );
+  }, []);
+
   const handleUpdateTextEvent = useCallback(
     (e: CustomEvent<string>) => {
       console.log(e);
       setText(e.detail);
+      triggerUpdateFromApp2(e.detail);
     },
     [setText],
   );
